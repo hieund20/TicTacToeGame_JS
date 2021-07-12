@@ -1,0 +1,99 @@
+[JS]
+- variable -
+var array = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ];// Mảng hai chiều, chứa 9 ô phần tử rỗng ban đầu.
+flag = 1;// Player 1: X, Player 2: O.
+checkDrawFlag = true;// kiểm tra hòa.
+var checkNextTurnFlag = true; //kiểm tra ai là người chơi kế tiếp.
+var xScore = 0; //điểm Player 1.
+var oScore = 0; //điểm Player 2.
+
+- function -
+setStartButton(): 
+	Thiết lập giá trị phần tử rỗng của mảng cho các 9 ô(button).
+	Hiển thị nó lên HTML(inner HTML).
+checkNextTurn():
+	Nếu checkNextTurnFlag = true (chưa kết màn)
+		Nếu flag = 1 thì hiển thị lượt của Player 2.
+		Nếu flag = 0 thì hiển thị lượt của Player 1.
+	Nếu checkNextTurnFlag = false (kết màn)
+		Hiển thị finish lên P1, P2 và kết thúc lượt chơi.
+   Thiết lập lại checkNextTurnFlag = true cho lượt chơi mới.
+disableButtonBlock():
+	Vô hiệu hóa 9 ô khi O hoặc X thắng hoặc Hòa.
+enableButtonBlock():
+	Kích hoạt 9 ô khi click Play again hoặc Play continue.
+checkWin():
+	8 test case cho 8 trường hợp thắng:
+		o o o	x x x	x x x	o x x	x o x	x x o	
+		x x x	o o o	x x x	o x x	x o x	x x o
+		x x x	x x x	o o o	o x x	x o x	x x o
+		
+		o x x	x x o
+		x o x	x o x
+		x x o	o x x
+	Giải thích: 
+		0 1 2
+	      0	x x x
+	      1	x x x
+	      2	x x x
+	//Test case 1.
+	Nếu a[0][0] khác rỗng và a[1][0] khác rỗng và 
+	a[0][0] = a[1][0] và a[0][0] = a[2][0] 	
+		Kiểm tra:
+			Nếu flag = 1 thì tô xanh 3 ô của Player 1 và tăng 1 điểm (thắng).
+			Nếu flag = 0 thì tô xanh 3 ô của Player 2 và tăng 1 điểm (thắng).
+		Thiết lập checkDrawFlag = false (không hòa).
+		Thiết lập checkNextTurn = false (kết thúc ván, hết lượt chơi).
+		disableButtonBlock(): Vô hiệu hóa 9 ô.
+	Tương tự 7 case kiểm tra thắng còn lại.
+	//Case cuối kiểm tra Hòa.
+	Nếu tất cả các a[][] khác rỗng (đã được lấp đầy) và checkDrawFlag = true
+		Hiển thị Draw.
+		Thiết lập checkNextTurnFlag = true cho lượt chơi mới.
+		disableButtonBlock(): Vô hiệu hóa 9 ô.
+ Gọi checkNextTurn().
+ Thiết lập checkDrawFlag = true cho lượt chơi mới.
+showScore():
+	Hiển thị điểm của Player 1 và Player 2.
+playAgainButton():
+	enableButtonBlock(): Kích hoạt lại 9 ô.
+	Thiết lập giá trị phần tử rỗng của mảng cho các 9 ô(button).
+	Hiển thị nó lên HTML(inner HTML).
+	Tô màu trắng mặc định ban đầu cho 9 ô.
+	Hiển thị lại các chữ ban đầu: "Player 1: X", "Player 1: O".
+	Thiết lập lại điểm của Player 1 và Player 2 là 0.
+playContinueButton():
+	enableButtonBlock(): Kích hoạt lại 9 ô.
+	enableButtonBlock(): Kích hoạt lại 9 ô.
+	Thiết lập giá trị phần tử rỗng của mảng cho các 9 ô(button).
+	Hiển thị nó lên HTML(inner HTML).
+	Tô màu trắng mặc định ban đầu cho 9 ô.
+	Hiển thị lại các chữ ban đầu: "Player 1: X", "Player 1: O".
+	*Điểm hai người chơi vẫn tính tiếp.
+setValueBtn1():
+	Nếu flag = 1
+		Gán a[0][0] bằng "x".
+		Hiển thị ra HTML giá trị a[0][0].
+		Gọi checkWin().
+		Gán flag = 0.
+		Gọi showScore.
+		return; //Kết thúc, tránh trôi xuống trường hợp flag = 0 bên dưới.
+	Nếu flag = 0
+		Gán a[0][0] bằng "o".
+		Hiển thị ra HTML giá trị a[0][0].
+		Gọi checkWin().
+		Gán flag = 1.
+		Gọi showScore.
+setValueBtn2(): Tương tự.
+setValueBtn3(): Tương tự.
+setValueBtn4(): Tương tự.
+setValueBtn5(): Tương tự.
+setValueBtn6(): Tương tự.
+setValueBtn7(): Tương tự.
+setValueBtn8(): Tương tự.
+setValueBtn9(): Tương tự.
+
