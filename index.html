@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe Game</title>
+        <meta charset="utf-8">
+        <!-- Reponsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ---  -->
+        <script src = "./js/script.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body onload="setStartButton()">
+        <div id="show2Player">
+            <div id="showStatusPlayer1">
+                <h3 id="turn1">Player 1: X</h3>
+            </div>
+            <div id="showStatusPlayer2">
+                <h3 id="turn2">Player 2: O</h3>
+            </div>
+        </div>
+
+        <div id="showScore">
+            <div id="player1Score">
+                <h3 id= "p1Score">0</h3>
+            </div>
+            <div id="player2Score">
+                <h3 id= "p2Score">0</h3>
+            </div>      
+        </div>
+        
+        <div id="buttonBlock">
+        <button id="btn1" onclick="setValueBtn1()">1</button>
+        <button id="btn2" onclick="setValueBtn2()">2</button>
+        <button id="btn3" onclick="setValueBtn3()">3</button>
+
+        <button id="btn4" onclick="setValueBtn4()">4</button>
+        <button id="btn5" onclick="setValueBtn5()">5</button>
+        <button id="btn6" onclick="setValueBtn6()">6</button>
+
+        <button id="btn7" onclick="setValueBtn7()">7</button>
+        <button id="btn8" onclick="setValueBtn8()">8</button>
+        <button id="btn9" onclick="setValueBtn9()">9</button>
+        </div>   
+        
+
+        <div id="featureBtn">
+            <button id="playAgain" onclick="playAgainButton()">Play again</button>
+            <button id="playContinue" onclick="playContinueButton()">Play continue</button>
+        </div>       
+
+        <footer>
+            <h3>Powered by hieund</h3>
+        </footer>
+    </body>
+
+
+</html>
