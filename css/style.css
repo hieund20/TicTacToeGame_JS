@@ -1,0 +1,283 @@
+*{
+    font-family: monospace;
+    font-size: large;
+    font-weight: bold;
+    box-sizing: border-box; /*Tính padding vào chiều rộng*/
+}
+
+/*Player turn*/
+#show2Player{
+    display: flex;
+    width: 33.4%;
+    margin: 5px auto;
+    background-color: #4db8ff;
+    border: 2px solid #4db8ff;
+    border-radius: 10px
+}
+
+#showStatusPlayer1{
+    text-align: center;
+    width: 50%;
+    border: 2px solid #4db8ff;
+    border-radius: 10px;
+    background-color: white;
+}
+#showStatusPlayer2{
+    text-align: center;
+    width: 50%;
+    border: 2px solid #4db8ff;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/*Show score*/
+#showScore{
+    display: flex;
+    width: 33.4%;
+    margin: 0 auto;
+    background-color: #4db8ff;
+    border: 5px solid #4db8ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#player1Score{
+    text-align: center;
+    width: 50%;
+    background-color: white;
+    border: 2px solid #4db8ff;
+    border-radius: 10px;
+}
+#player2Score{
+    text-align: center;
+    width: 50%;
+    background-color: white;
+    border: 2px solid #4db8ff;
+    border-radius: 10px;
+}
+
+/*Button block*/
+#buttonBlock button{
+    position: relative;
+    font-size: xx-large ;
+    background-color: white;
+    width: 30%;
+    height: 0;
+    margin: 1%;
+    padding-bottom: 19%; /*vertical align*/
+    padding-top: 11%; /*vertical align*/
+    /* padding-top: 15%; */
+    border-radius: 6px;
+    border: none;
+}
+
+#buttonBlock button:first-child{
+    margin-left: 3%;
+}
+#buttonBlock button:nth-child(3){
+    margin-right: 1%;
+}
+#buttonBlock button:nth-child(4){
+    margin-left: 3%;
+}
+#buttonBlock button:nth-child(6){
+    margin-right: 1%;
+}
+#buttonBlock button:nth-child(7){
+    margin-left: 3%;
+}
+#buttonBlock button:nth-child(9){
+    margin-right: 1%;
+}
+
+#buttonBlock button:hover{
+    background-color: #ccebff;
+    cursor: pointer;
+}
+
+#buttonBlock{
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.4%;
+    margin: 0 auto;
+    padding-bottom: 0.6%;
+    background-color: #4db8ff;
+    border: 5px solid #4db8ff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*Feature button*/
+#featureBtn{
+    display: flex;
+    width: 33.4%;
+    margin: 8px auto;
+}
+
+#playAgain{
+    color: white;
+    background-color: #0047b3;
+    width: 50%;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+#playContinue{
+    color: white;
+    background-color: #0047b3;
+    width: 50%;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+#playAgain:hover{
+    cursor: pointer;
+    background-color: #0066ff;
+}
+
+#playContinue:hover{
+    cursor: pointer;
+    background-color: #0066ff;
+}
+ 
+/*Footer*/
+footer{
+    margin-top: 80px;
+    border-top: 3px solid black;
+}
+
+footer h3{
+    text-align: center;
+}
+
+/*Reponsive design*/
+/*Iphone 6/7/8/Plus, Galaxy S5, G4, Pixel 2, Pixel XL*/
+@media screen and (max-width: 450px) {
+    #show2Player{
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #showScore{
+        width: 90%;
+    }
+    #buttonBlock{
+        width: 90%;
+    }
+    #buttonBlock button{
+        padding-bottom: 20.5% !important; /*vertical align*/
+        padding-top: 9.5% !important; /*vertical align*/
+    }
+    #featureBtn{
+        display: block;
+        width: 90%;
+    }
+    #playAgain{
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    #playContinue{
+        width: 100%;
+        margin: 0 auto;
+    }    
+}
+/*Ipad*/
+@media screen and (max-width: 780px) {
+    #show2Player{
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #showScore{
+        width: 90%;
+    }
+    #buttonBlock{
+        width: 90%;
+    }
+    #buttonBlock button{
+        padding-bottom: 18%; /*vertical align*/
+        padding-top: 12%; /*vertical align*/
+    }
+    #featureBtn{
+        display: block;
+        width: 90%;
+    }
+    #playAgain{
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    #playContinue{
+        width: 100%;
+        margin: 0 auto;
+    }    
+}
+/*Ipad Pro*/
+@media screen and (max-width: 1025px) {
+    #show2Player{
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #showScore{
+        width: 90%;
+    }
+    #buttonBlock{
+        width: 90%;
+    }
+    #buttonBlock button{
+        padding-bottom: 17%; /*vertical align*/
+        padding-top: 13%; /*vertical align*/
+    }
+    #featureBtn{
+        display: block;
+        width: 90%;
+    }
+    #playAgain{
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    #playContinue{
+        width: 100%;
+        margin: 0 auto;
+    }    
+}
+/*Galaxy Fold*/
+@media screen and (max-width: 290px) {
+    #show2Player{
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #showScore{
+        width: 90%;
+    }
+    #buttonBlock{
+        width: 90%;
+    }
+    #buttonBlock button{
+        padding-bottom: 21% !important; /*vertical align*/
+        padding-top: 9% !important; /*vertical align*/
+    }
+    #featureBtn{
+        display: block;
+        width: 90%;
+    }
+    #playAgain{
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    #playContinue{
+        width: 100%;
+        margin: 0 auto;
+    }    
+}
