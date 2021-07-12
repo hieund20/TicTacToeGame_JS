@@ -310,7 +310,7 @@ function playAgainButton(){
     document.getElementById("btn9").style.backgroundColor = "white";
 
     document.getElementById("turn1").innerHTML = "Player 1: X";
-    document.getElementById("turn2").innerHTML = "Player 1: O";
+    document.getElementById("turn2").innerHTML = "Player 2: O";
 
     document.getElementById("showStatusPlayer1").style.backgroundColor = "white";
     document.getElementById("showStatusPlayer2").style.backgroundColor = "white";
@@ -367,7 +367,7 @@ function playContinueButton(){
     document.getElementById("btn9").style.backgroundColor = "white";
 
     document.getElementById("turn1").innerHTML = "Player 1: X";
-    document.getElementById("turn2").innerHTML = "Player 1: O";
+    document.getElementById("turn2").innerHTML = "Player 2: O";
 
     document.getElementById("showStatusPlayer1").style.backgroundColor = "white";
     document.getElementById("showStatusPlayer2").style.backgroundColor = "white";
